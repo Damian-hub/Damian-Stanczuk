@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<category>
+	    <pattern>*</pattern>
+	    <template>I Have no answer for that</template>
+	</category>
+	<category>
+	    <pattern>Hi</pattern>
+	    <template>
+	        <random>
+	            <li>Hi, I'm chatbot. What's your name?</li>
+	            <li>Hello, I'm chatbot. What's your name?</li>
+	            <li>Good Morning, I'm chatbot. What's your name?</li>
+	            <li>Howdy, I'm chatbot. What's your name?</li>
+	        </random>
+	    </template>
+	</category>
+	<category>
+	    <pattern>Hello</pattern>
+	    <template><srai>Hi</srai></template>
+	</category>
+		<category>
+	    <pattern>Good morning</pattern>
+	    <template><srai>Hi</srai></template>
+	</category>
+	<category>
+	    <pattern>Hi ^</pattern>
+	    <template><srai>Hello</srai></template>
+	</category>
+	<category>
+	    <pattern>My name is *</pattern>
+	    <template>Nice to meet you, <set name="name"><star/></set> ! I'm a bot that will help you choose your dream trip. What month do you have holidays on?</template>
+	</category>
+	<category>
+	    <pattern>* December</pattern>
+	    <template>Oh, winter holidays is good idea in order to skiing or lie on the beatch. Have you ever been abroad?</template>
+	</category>
+		<category>
+	    <pattern>* January</pattern>
+	    <template><srai>December</srai></template>
+	</category>
+		<category>
+	    <pattern>* February</pattern>
+	    <template><srai>December</srai></template>
+	</category>
+	<category>
+	    <pattern>* November</pattern>
+	    <template><srai>December</srai></template>
+	</category>
+	<category>
+    	<pattern>* June</pattern>
+	    <template>Oh, summer holidays is great time to rest. Have you ever been abroad? </template>
+	</category>
+		<category>
+	    <pattern>* July</pattern>
+	    <template><srai>June</srai></template>
+	</category>
+		<category>
+	    <pattern>* August</pattern>
+	    <template><srai>June</srai></template>
+	</category>
+	<category>
+	    <pattern>* May</pattern>
+	    <template><srai>June</srai></template>
+	</category>
+	<category>
+	    <pattern>* Never</pattern>
+	    <template><get name="name"/>, I'm sorry for this reason. Do you prefer to visit or relax during holidays?</template>
+	</category>
+	<category>
+	    <pattern>No</pattern>
+	    <template><srai>Never</srai></template>
+	</category>
+	<category>
+	    <pattern>Yes</pattern>
+	    <template>Excellently <get name="name"/>! Do you prefer to visit or relax during holidays?</template>
+	</category>
+	<category>
+	    <pattern>Relax</pattern>
+	    <template><get name="name"/>, I reccomend travel to Greece or Cyprus where all year is great weather. Do you travel alone or with somebody?</template>
+	</category>
+	<category>
+	    <pattern>visit</pattern>
+	    <template><get name="name"/>, I propose travel to Italy where is delicious and a lot of building from ancient times. Do you travel alone or with somebody?</template>
+	</category>
+	<category>
+	    <pattern>Alone</pattern>
+	    <template>It's good idea to go this place. How much money do you want to spend on vacation?</template>
+	</category>
+	<category>
+	    <pattern>With *</pattern>
+	    <template><srai>Alone</srai></template>
+	</category>
+		<category>
+	    <pattern>1000 dollars</pattern>
+	    <template><get name="name"/>, I can offer you a 3-star hotel for that. Do you agree?
+	    <button>
+	        <text>Evi Hotel</text>
+	        <url>http://evi-hotel.rhodes.hotels-rhodes.net/en/</url>
+        </button>
+	    </template>
+	</category>
+	<category>
+	    <pattern>2000 dollars</pattern>
+	    <template><get name="name"/>, I can offer you a 4-star hotel for that. Do you agree?
+	    <button>
+	        <text>Rhodos Horizon City</text>
+	        <url>https://pl.tripadvisor.com/Hotel_Review-g635613-d17508797-Reviews-Rhodos_Horizon_City-Rhodes_Town_Rhodes_Dodecanese_South_Aegean.html</url>
+        </button>
+	    </template>
+	</category>
+	<category>
+	    <pattern>3000 dollars</pattern>
+	    <template><get name="name"/>, I can offer you a 5-star hotel for that. Do you agree?
+	    <button>
+	        <text>GDM MEGARON HOTEL</text>
+	        <url>https://www.guestreservations.com/gdm-megaron/booking?gclid=EAIaIQobChMIxuHsyLCw5wIVk-F3Ch1McgaLEAAYASAAEgI8-_D_BwE</url>
+        </button>
+	    </template>
+	</category>
+	<category>
+	    <pattern>Yes I Agree</pattern>
+	     <template>Which date interest you?
+	     <button>
+	         <text>1-9</text>
+	         <postback>abc</postback>
+         </button>
+         <button>
+	         <text>10-15</text>
+	         <postback>abc</postback>
+         </button>
+         <button>
+	         <text>15-25</text>
+	         <postback>abc</postback>
+         </button>
+	     
+	     </template>
+	  
+	</category>
+
+	<category>
+	    <pattern>I disagree</pattern>
+	    <template> Hmmm.. Okey, maybe i can find something else, ok?</template>
+	</category>
+	<category>
+	    <pattern>abc</pattern>
+	    <template> Okey, i will reserver it for you. Thats all?
+	    <button>
+	         <text>Yes</text>
+	         <postback>Byeee</postback>
+         </button>
+         <button>
+	         <text>No</text>
+	         <postback>whatelse</postback>
+         </button>
+	</template>
+	</category>
+	<category>
+	    <pattern>Byeee</pattern>
+	    <template>Goodbye, <get name="name"/></template>
+	</category>
+	<category>
+	    <pattern>whatelse</pattern>
+	    <template><get name="name"/>, Do you want to change date?
+	     <button>
+	         <text>Yes</text>
+	         <postback>yes i agree</postback>
+         </button>
+         <button>
+	         <text>No</text>
+	         <postback>abc</postback>
+         </button>
+	    </template>
+	</category>
+	<category>
+	    <pattern>Ok</pattern>
+	    <template><get name="name"/>, I have something special for you. Spain, its only one. Do you want to reserve or cancel yours vacation?</template>
+	</category>
+	<category>
+	    <pattern>reserve</pattern>
+	    <template><get name="name"/>, Which date?</template>
+	</category>
+	<category>
+	    <pattern>cancel</pattern>
+	    <template><get name="name"/>, I'm sorry, I can't help you.</template>
+	</category>
+	<category>
+	    <pattern>Bye</pattern>
+	    <template>
+	        <random>
+	            <li>Goodbye.</li>
+	            <li>Bye.</li>
+	            <li>Good luck!</li>
+	        </random>
+	    </template>
+	</category>
+
+</aiml>
